@@ -11,29 +11,30 @@ import Update from "./pages/board/update";
 const router = createBrowserRouter([
   {
     // 전체 조회
-    path: "/board",
+    path: "/freeboard",
     element: <List/>,
     errorElement: <ErrorPage/>
   },
   {
     // 게시글 조회
-    path: "/board/:id",
+    path: "/freeboard/:id",
     element: <Read/>,
   },
   {
     // 게시글 생성
-    path: "/board/create",
+    path: "/freeboard/create",
     element: <Create/>,
   },
   {
     // 게시글 수정
-    path: "/board/update/:id",
+    path: "/freeboard/update/:id",
     element: <Update/>,
   },
 ]);
 
 class App extends React.Component {
   render() {
+    // React.StrictMode 사용하면 render가 두번씩 됨
     return (
       <>
         <React.StrictMode>
